@@ -1,6 +1,10 @@
 import React from "react";
+// add is declared from Home
+const Edit = ({ add }) => {
+  function addItem() {
+    add([99999, 2]);
+  }
 
-const Edit = () => {
   return (
     <div>
       <h1>備忘錄</h1>
@@ -10,7 +14,9 @@ const Edit = () => {
       <input type="date" />
       <p>時間:</p>
       <input type="time" />
-      <button className="add">新增</button>
+      <button onClick={addItem} className="add">
+        新增
+      </button>
     </div>
   );
 };
