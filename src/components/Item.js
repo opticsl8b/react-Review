@@ -1,9 +1,12 @@
 import React from "react";
-
-const Item = () => {
+// 傳入note,date,
+const Item = ({ noteData, dateData, timeData }) => {
   return (
     <div className="item">
-      我是Item
+      <div>
+        <p>{noteData}</p>
+        <p>{`${dateData} ${timeData}`}</p>
+      </div>
       <button className="remove">刪除</button>
     </div>
   );

@@ -4,9 +4,11 @@ import Item from "./Item";
 const List = ({ listData }) => {
   return (
     <div className="list">
-      {listData.map((item) => (
-        <Item key={item} />
-      ))}
+      {listData.map((item) => {
+        const { note, date, time } = item;
+        // 將noteData,dateData,timeData傳入Item
+        return <Item noteData={note} dateData={date} timeData={time} />;
+      })}
     </div>
   );
 };
