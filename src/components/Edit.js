@@ -1,6 +1,8 @@
 import React from "react";
 // 取得input value較好的方式-每個input設一個useState
 import { useState } from "react";
+// 幫key產生一個unique id
+import { v4 } from "uuid";
 
 // add is declared from Home
 const Edit = ({ add }) => {
@@ -23,7 +25,7 @@ const Edit = ({ add }) => {
     // 在輸入input後將Value提取出來
     // "...prevData"為原本的空陣列
     add(function (prevData) {
-      return [...prevData, { note, date, time }];
+      return [...prevData, { id: v4(), note, date, time }];
     });
   }
 

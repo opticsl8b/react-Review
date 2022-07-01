@@ -1,13 +1,21 @@
 import React from "react";
 import Item from "./Item";
 // listData is declared from Home
-const List = ({ listData }) => {
+const List = ({ listData, deleteData }) => {
   return (
     <div className="list">
       {listData.map((item) => {
-        const { note, date, time } = item;
+        const { note, date, time, id } = item;
         // 將noteData,dateData,timeData傳入Item
-        return <Item noteData={note} dateData={date} timeData={time} />;
+        return (
+          <Item
+            key={id}
+            noteData={note}
+            dateData={date}
+            timeData={time}
+            deleteData={deleteData}
+          />
+        );
       })}
     </div>
   );

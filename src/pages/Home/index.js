@@ -9,10 +9,11 @@ const Home = () => {
   const [Data, setData] = useState([]);
   return (
     <div className="app">
-      {/* have Edit with a add function */}
+      {/* have Edit with a add function which change the state of Data*/}
       <Edit add={setData} />
+      {/* Once data state has been change  */}
       {/* pass Data to List component as listData */}
-      <List listData={Data} />
+      <List listData={Data} deleteData={setData} />
     </div>
   );
 };
