@@ -6,7 +6,7 @@ const List = ({ listData, deleteData }) => {
     <div className="list">
       {listData.map((item) => {
         const { note, date, time, id } = item;
-        // 將noteData,dateData,timeData傳入Item
+        // 將noteData,dateData,timeData,id傳入Item
         return (
           <Item
             key={id}

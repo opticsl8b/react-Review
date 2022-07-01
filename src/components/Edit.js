@@ -25,7 +25,8 @@ const Edit = ({ add }) => {
     // 在輸入input後將Value提取出來
     // "...prevData"為原本的空陣列
     add(function (prevData) {
-      return [...prevData, { id: v4(), note, date, time }];
+      // 將prevData放在新input後面，新增的Data會在最前/上面
+      return [{ id: v4(), note, date, time }, ...prevData];
     });
   }
 
