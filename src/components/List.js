@@ -10,6 +10,7 @@ const List = ({ listData, deleteData }) => {
         return (
           <Item
             key={id}
+            id={id}
             noteData={note}
             dateData={date}
             timeData={time}

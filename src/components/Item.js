@@ -1,13 +1,20 @@
 import React from "react";
 // 傳入note,date,
-const Item = ({ noteData, dateData, timeData }) => {
+const Item = ({ id, noteData, dateData, timeData, deleteData }) => {
+  function deleteItem() {
+    deleteData(function (prev) {
+      return prev.filter((item) => item.id !== id);
+    });
+  }
   return (
     <div className="item">
       <div>
         <p>{noteData}</p>
         <p>{`${dateData} ${timeData}`}</p>
       </div>
-      <button className="remove">刪除</button>
+      <button onClick={deleteItem} className="remove">
+        刪除
+      </button>
     </div>
   );
 };
