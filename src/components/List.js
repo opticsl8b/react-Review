@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 // listData is declared from Home
-const List = ({ listData, deleteData }) => {
+const List = ({ listData, deleteData, submittingStatus }) => {
   return (
     <div className="list">
       {listData.map((item) => {
@@ -15,6 +15,7 @@ const List = ({ listData, deleteData }) => {
             dateData={date}
             timeData={time}
             deleteData={deleteData}
+            submittingStatus={submittingStatus}
           />
         );
       })}

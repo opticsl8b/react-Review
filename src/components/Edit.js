@@ -5,7 +5,7 @@ import { useState } from "react";
 import { v4 } from "uuid";
 
 // add is declared from Home
-const Edit = ({ add }) => {
+const Edit = ({ add, submittingStatus }) => {
   const [note, setNote] = useState("");
   function noteChange(e) {
     setNote(e.target.value);
@@ -22,6 +22,8 @@ const Edit = ({ add }) => {
   }
 
   function addItem() {
+    // 在新增時將useRef設成True使useEffect會被執行
+    submittingStatus.current = true;
     // 在輸入input後將Value提取出來
     // "...prevData"為原本的空陣列
     add(function (prevData) {
