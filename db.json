@@ -2,12 +2,14 @@
   "posts": [
     {
       "id": "1",
-      "data": {
-        "id": "00001",
-        "note": "第一個note",
-        "data": "",
-        "time": ""
-      }
+      "data": [
+        {
+          "id": "00001",
+          "note": "第一個note",
+          "date": "",
+          "time": ""
+        }
+      ]
     }
   ]
 }
